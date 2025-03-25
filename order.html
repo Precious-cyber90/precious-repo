@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>order</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"></script> 
+</head>
+<body>
+    <header>
+        <div>
+         <img src="Pretty-P's Logo.png" alt="pretty-p's Logo" width="100" height="100">
+         <a href="home.html" target="_blank">Home</a>
+         <a href="about.html" target="_blank">About us</a>
+         <a href="collections.html" target="_blank">Collections</a>
+         <a href="prices.html" target="_blank">Prices</a>
+        </div>
+    </header>
+       <div class="container">
+         <h1><strong>PRETTY P's COLLECTION</strong></h1>
+         <h2><strong>Elegant Transformation</strong></h2>
+       </div>
+        <h3>ORDER</h3>
+        <form>
+            <h4>Please Fill In Your Information</h4>
+            <label for="fname" required>First name: </label><br>
+            <input type="text" id="fname" name="fname" placeholder="firstname" ><br><br>
+            
+            <label for="lname" required>Last name:</label><br>
+            <input type="text" id="lname" name="lname" placeholder="lastname"><br><br>
+            
+            <label for="email" required>Email:</label><br>
+            <input type="email" id="email" placeholder="name@email.com"><br><br>
+            
+            <label for="address" required>Address:</label><br>
+            <input type="text" id="address" placeholder="address"><br><br>
+            
+            <label for="state" required>State:</label><br>
+            <input type="text" id="state" placeholder="state"><br><br>
+            
+            <label for="phonenumber" required>Phone number</label><br>
+            <input type="text" id="phonenumber" placeholder="0000 000 0000"><br><br>
+            
+            <button id="submitButton" type="button" onclick="window.location.href='success.html'" disabled>Submit</button><br>
+            
+            <h3><strong>FEMALE CLOTHING COLLECTION LINE</strong></h3>
+        </form>
+        
+    <a href="https://wa.me/+2348121849187" target="_blank">shop from our collections</a> 
+        <!-- <a href="send.htmll" style="font-size: 20px; color: purple;">SEND</a> -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script>
+            const inputs = document.querySelectorAll('input');
+            const submitButton = document.getElementById('submitButton');
+            inputs.forEach(input => {
+                 input.addEventListener('input', checkInputs); 
+                });
+                function checkInputs() {
+                    let allFilled = true;
+                    inputs.forEach(input => {
+                        if (!input.value) {
+                            allFilled = false;
+                        }
+                    });
+                     submitButton.disabled = !allFilled; 
+                };
+        </script>
+        <footer>
+            <p>&copy;2025 PRETTY P's COLLECTION.</p>
+          </footer>
+</body>
+</html>
